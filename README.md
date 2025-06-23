@@ -1,2 +1,3 @@
-# PetStore_Karate
-API Swagger Petstore and Karate
+# Pet Store & Karate DSL
+
+API Swagger Pet Store and Karate
