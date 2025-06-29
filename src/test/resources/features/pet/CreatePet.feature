@@ -3,12 +3,12 @@ Feature: Create pet
 
   @createPet
   Scenario Outline: Add a new pet <name> to the store
-    Given url "https://petstore.swagger.io/v2"
-    And   path "/pet"
+    Given url baseURL
+    And   path '/pet'
     And   request
     """
     {
-  "id": 0,
+  "id": <id>,
   "category": {
     "id": 0,
     "name": "string"
@@ -23,12 +23,16 @@ Feature: Create pet
       "name": "string"
     }
   ],
-  "status": "available"
+  "status": "<status>"
   }
     """
     When  method post
     Then  status 200
+    *     match  response.id == '#number? _ == <id>'
+    *     match  response.name == '#string? _ == "<name>"'
+    *     match  response.status == '#string? _ == "<status>"'
     Examples:
-      | name |
-      | Boby |
-      | Alex |
+      | id | name | status    |
+      | 11 | Boby | available |
+      | 21 | Alex | pending   |
+      | 31 | Pepe | sold      |
