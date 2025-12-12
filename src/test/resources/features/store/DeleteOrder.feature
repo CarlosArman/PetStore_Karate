@@ -20,7 +20,6 @@ Feature: Access to Petstore orders - Delete Order
       "message": "#(orderId)"
     }
     """
-    Given url    baseURL
     And   path   'store/order/'+orderId
     When  method get
     Then  status 404

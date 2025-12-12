@@ -1,0 +1,59 @@
+name: CI - Karate + Maven
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    paths:
+      - "pom.xml"
+      - "src/**"
+      - ".github/workflows/**"
+  pull_request:
+    branches: [ "main", "master" ]
+    paths:
+      - "pom.xml"
+      - "src/**"
+
+jobs:
+  test:
+    name: Run Karate Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [ "17" ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java }}
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+          cache: 'maven'
+
+      - name: Build & Test (Karate)
+        run: |
+          mvn clean test \
+            -DskipITs=true \
+
+      - name: Upload Surefire reports (JUnit/XML + logs)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports-${{ matrix.java }}
+          path: |
+            target/surefire-reports/
+            target/*.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload Karate HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: karate-reports-${{ matrix.java }}
+          path: |
+            target/karate-reports/
+          if-no-files-found: ignore
+          retention-days: 7
