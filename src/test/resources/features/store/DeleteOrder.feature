@@ -40,17 +40,17 @@ Feature: Access to Petstore orders - Delete Order
     Given url    baseURL
     And   path   'store/order/<id>'
     When  method delete
-    Then  status 200
+    Then  status 404
     *     print  response
     *     match  karate.response.header('content-type') == 'application/json'
-#    *     match  response ==
-#    """
-#  {
-#  "code": 200,
-#  "type": "unknown",
-#  "message": "<id>"
-#  }
-#  """
+    *     match  response ==
+    """
+      {
+      "code":1,
+      "type":"error",
+      "message":"Order not found"
+      }
+    """
     Examples:
       | id  |
       | 101 |
