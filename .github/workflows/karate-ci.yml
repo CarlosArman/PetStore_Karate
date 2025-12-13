@@ -12,12 +12,17 @@ on:
     paths:
       - "pom.xml"
       - "src/**"
-  workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  workflow_dispatch:
+    inputs:
+      ambiente:
+        description: "Ambiente de destino (dev|qa|prod)"
+        required: true
+        default: "dev"
+      karate_tag:
+        description: "Tag de Karate a ejecutar (ej. @smoke, @regression). Deja vacío para correr todo."
+        required: false
+        default: ""
 
 jobs:
   test:
@@ -39,9 +44,27 @@ jobs:
           cache: 'maven'
 
       - name: Build & Test (Karate)
+        shell: bash
         run: |
+          set -euo pipefail
+          
+          AMBIENTE="${{ github.event.inputs.ambiente }}"
+          TAG="${{ github.event.inputs.karate_tag }}"
+          
+          # Si llega un tag, lo convertimos en '--tags <tag>'; si no, vacío
+          KARATE_FLAGS=""
+          if [[ -n "$TAG" ]]; then
+            KARATE_FLAGS="--tags $TAG"
+          fi
+          
+          echo "Ambiente: $AMBIENTE"
+          echo "Karate tag: ${TAG:-<sin tag>}"
+          echo "Flags para Karate: ${KARATE_FLAGS:-<ninguno>}"
+          
           mvn clean test \
             -DskipITs=true \
+            -Dkarate.env="$AMBIENTE" \
+            -Dkarate.options="$KARATE_FLAGS"
 
       - name: Upload Surefire reports (JUnit/XML + logs)
         if: always()
@@ -69,6 +92,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
 
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
     # Publica siempre, pero NO en PRs desde forks (donde el token no puede escribir)
     if: ${{ always() && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) }}
     steps:
@@ -86,6 +113,7 @@ jobs:
 
       # 🚀 Despliegue a GitHub Pages
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
 
       # 🔗 Imprime el enlace y lo agrega al Job Summary

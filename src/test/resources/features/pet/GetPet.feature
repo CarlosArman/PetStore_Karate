@@ -1,7 +1,7 @@
 @Pet @PetStore
 Feature: Get pet
 
-  @getPetByID
+  @getPetByID @smoke
   Scenario: Find pet by ID
     Given url    baseURL
     And   path   '/pet/100'

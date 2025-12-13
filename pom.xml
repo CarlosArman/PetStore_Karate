@@ -50,10 +50,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
+                    <systemProperties>
+                        <karate.options>--tags @PetStore</karate.options>
+                    </systemProperties>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

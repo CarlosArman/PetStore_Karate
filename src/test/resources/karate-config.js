@@ -5,9 +5,11 @@ function fn() {
     if (!env) {
         env = 'dev';
     }
-    if (env == 'dev') {
+    if (env === 'dev') {
         baseURL = 'https://petstore.swagger.io/v2';
-    } else if (env == 'cert') {
+    } else if (env === 'cert') {
+        baseURL = 'https://petstore.swagger.io/v2';
+    } else if (env === 'prod') {
         baseURL = 'https://petstore.swagger.io/v2';
     }
 
@@ -18,7 +20,7 @@ function fn() {
     }
 
     karate.log('karate.env system property was:', env);
-//    karate.log('Base URL system property was:', baseURL);
+    karate.log('Base URL system property was:', baseURL);
 
     return config;
 }
