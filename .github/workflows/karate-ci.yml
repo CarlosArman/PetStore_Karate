@@ -125,7 +125,7 @@ jobs:
           echo "GitHub Pages URL: ${URL}karate-summary.html"
           {
             printf "## 🔗 Enlace de la publicación\n\n"
-            printf "- **URL:** %s\n" "${URL}karate-summary.html"
+            printf -- "- **URL:** %s\n" "${URL}karate-summary.html"
           } >> "$GITHUB_STEP_SUMMARY"
 
 
