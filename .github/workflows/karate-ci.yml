@@ -57,3 +57,22 @@ jobs:
             target/karate-reports/
           if-no-files-found: ignore
           retention-days: 7
+
+  publish-report:
+    name: Publish Karate Report to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: test
+    if: ${{ always() }}
+    steps:
+      - name: Download karate report
+        uses: actions/download-artifact@v4
+        with:
+          name: karate-reports-17
+          path: karate-report
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: karate-report
+

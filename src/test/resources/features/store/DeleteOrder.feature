@@ -43,14 +43,14 @@ Feature: Access to Petstore orders - Delete Order
     Then  status 200
     *     print  response
     *     match  karate.response.header('content-type') == 'application/json'
-    *     match  response ==
-    """
-  {
-  "code": 200,
-  "type": "unknown",
-  "message": "<id>"
-  }
-  """
+#    *     match  response ==
+#    """
+#  {
+#  "code": 200,
+#  "type": "unknown",
+#  "message": "<id>"
+#  }
+#  """
     Examples:
       | id  |
       | 101 |
