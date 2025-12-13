@@ -87,3 +87,12 @@ jobs:
       # 🚀 Despliegue a GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
+      # 🔗 Imprime el enlace y lo agrega al Job Summary
+      - name: Print public URL
+        run: |
+          echo "GitHub Pages URL: ${{ steps.deployment.outputs.page_url }}"
+          {
+          echo "## 🔗 Enlace de la publicación"
+          echo ""
+          echo "- **URL:** ${{ steps.deployment.outputs.page_url }}"
