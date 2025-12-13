@@ -49,5 +49,5 @@ Feature: Access to Petstore orders - Create Order
     Examples:
       | id  | petId | quantity | status    |
       | 101 | 2     | 1        | placed    |
-      | 201 | 3     | 2        | approved  |
-      | 301 | 4     | 1        | delivered |
+      | 202 | 3     | 2        | approved  |
+      | 303 | 4     | 1        | delivered |

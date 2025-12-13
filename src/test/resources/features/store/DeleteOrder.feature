@@ -1,4 +1,4 @@
-@Store @PetStore
+@Store
 Feature: Access to Petstore orders - Delete Order
 
   @deleteOrder
@@ -34,8 +34,7 @@ Feature: Access to Petstore orders - Delete Order
     }
     """
 
-
-  @deleteOrders
+  @deleteOrders @PetStore
   Scenario Outline: Delete purchase order by ID <id>
     Given url    baseURL
     And   path   'store/order/<id>'
@@ -45,14 +44,14 @@ Feature: Access to Petstore orders - Delete Order
     *     match  karate.response.header('content-type') == 'application/json'
     *     match  response ==
     """
-      {
-      "code":1,
-      "type":"error",
-      "message":"Order not found"
-      }
+    {
+      "code": 1,
+      "type": "error",
+      "message": "Order not found"
+    }
     """
     Examples:
       | id  |
-      | 101 |
-      | 201 |
-      | 301 |
+      | 102 |
+      | 203 |
+      | 304 |
