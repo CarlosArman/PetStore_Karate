@@ -121,15 +121,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          URL="${{ steps.deployment.outputs.page_url || '' }}"
-          echo "GitHub Pages URL: ${URL}"
+          URL="${{ steps.deployment.outputs.page_url }}"
+          echo "GitHub Pages URL: ${URL}karate-summary.html"
           {
             printf "## 🔗 Enlace de la publicación\n\n"
-            if [[ -n "${URL}" ]]; then
-              printf "- **URL:** %s\n" "${URL}"
-            else
-              printf "_Aún no disponible. Verifica que el step 'Deploy to GitHub Pages' haya terminado OK y tenga 'id: deployment'._\n"
-            fi
+            printf "- **URL:** %s\n" "${URL}karate-summary.html"
           } >> "$GITHUB_STEP_SUMMARY"
-  
+
 
