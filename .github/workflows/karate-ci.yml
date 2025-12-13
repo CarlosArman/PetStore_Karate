@@ -78,12 +78,6 @@ jobs:
           name: karate-reports-17
           path: ./site
 
-      # ✅ Habilita Pages y obtiene metadatos del sitio (si aún no está habilitado)
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       # Sube el contenido que vas a publicar (tu reporte HTML)
       - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v3
