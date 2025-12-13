@@ -25,4 +25,4 @@ This project demonstrates **API testing** using Karate DSL with the **Swagger Pe
 
 View the full Karate test execution summary here:
 
-[👉 **Click to open the report**](https://carlosarman.github.io/PetStore)
+[👉 **Click to open the report**](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
