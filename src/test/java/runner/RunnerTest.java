@@ -1,10 +1,24 @@
 package runner;
 
-import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RunnerTest {
-    @Karate.Test
-    Karate testRunner() {
-        return Karate.run("classpath:features").tags("@PetStore").relativeTo(getClass());
+
+    @Test
+    void runTestSuite() {
+        Results results = Runner.path("classpath:features")     // raíz donde están tus .feature
+                .tags("@PetStore")                            // incluye @smoke, excluye @wip
+                .backupReportDir(false)                             // evita crear karate-reports-<timestamp>
+                .reportDir("target/karate-reports")                 // fuerza la ruta estándar
+                .outputJunitXml(true)                               // opcional: para CI
+                .outputCucumberJson(true)                           // opcional: para plugins de reportes
+                .parallel(1);                                       // ejecuta en paralelo
+
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
+
 }

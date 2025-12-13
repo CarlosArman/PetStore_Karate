@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       ambiente:
-        description: "Ambiente de destino (dev|qa|prod)"
+        description: "Ambiente de destino (dev|cert|prod)"
         required: true
         default: "dev"
       karate_tag:

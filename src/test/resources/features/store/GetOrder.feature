@@ -1,7 +1,7 @@
 @Store @PetStore
 Feature: Access to Petstore orders - Get Order
 
-  @getOrder
+  @getOrder @smoke
   Scenario: Find purchase order by ID
     *     def   order = call read('classpath:features/store/CreateOrder.feature@createOrder')
     *     def   orderId = order.orderId
@@ -14,7 +14,7 @@ Feature: Access to Petstore orders - Get Order
     And   print  response
     And   match  response.id == orderId
 
-  @getOrders
+  @getOrders @regression
   Scenario Outline: Find purchase order by ID <id>
     Given url    baseURL
     And   path   '/store/order/<id>'

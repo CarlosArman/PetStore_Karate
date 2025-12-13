@@ -1,7 +1,7 @@
 @Store @PetStore
 Feature: Access to Petstore orders - Create Order
 
-  @createOrder
+  @createOrder @smoke
   Scenario: Place order for a pet
     Given url    baseURL
     And   path   '/store/order'

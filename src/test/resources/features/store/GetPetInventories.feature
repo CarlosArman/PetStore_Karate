@@ -1,7 +1,7 @@
 @Store @PetStore
 Feature: Access to Petstore orders
 
-  @getPetInventory
+  @getPetInventory @regression
   Scenario: Returns pet inventories by status
     Given url    baseURL
     And   path   '/store/inventory'

@@ -9,7 +9,7 @@ Feature: Get pet
     Then  status 200
     *     print  response
 
-  @getPetByStatus
+  @getPetByStatus @regression
   Scenario Outline: Finds pets by status <status>
     Given url    baseURL
     And   path   '/pet/findByStatus'

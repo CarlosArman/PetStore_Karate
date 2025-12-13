@@ -1,7 +1,7 @@
 @Pet @PetStore
 Feature: Create pet
 
-  @createPet
+  @createPet @regression
   Scenario Outline: Add a new pet <name> to the store
     Given url baseURL
     And   path '/pet'
