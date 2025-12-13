@@ -45,9 +45,9 @@ Feature: Access to Petstore orders - Delete Order
     *     match  response ==
     """
     {
-      "code": 1,
-      "type": "error",
-      "message": "Order not found"
+    "code":404,
+    "type":"unknown",
+    "message":"Order Not Found"
     }
     """
     Examples:
