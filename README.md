@@ -21,10 +21,37 @@ This project demonstrates **API testing** using Karate DSL with the **Swagger Pe
 
 ---
 
-## 📊 Test Report
+## ▶️ CI Workflow
 
-[![CI - Karate + Maven](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+[![Workflow Status](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+
+### How to run manually:
+
+[![Run CI – Karate + Maven](https://img.shields.io/badge/Run%20Workflow-CI%20%E2%80%93%20e/actionsbutton)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+
+1. Click the **Run Workflow** button above.
+2. Choose the `ambiente` (`dev | qa | prod`).
+3. (Optional) Add `karate_tag` (e.g., `@smoke`, `@regression`).
+4. Click **Run workflow**.
+
+> ℹ️ Requires write access to the repository.
+
+---
+
+## 📊 Test Report
 
 View the full Karate test execution summary here:
 
 [👉 **Click to open the report**](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
+
+## 🧩 Run Tests Locally
+
+To execute tests locally with Maven:
+
+```bash
+# Run all tests in DEV environment
+mvn clean test -Dkarate.env=dev
+
+# Run tests in QA environment with a specific tag
+mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
+```
