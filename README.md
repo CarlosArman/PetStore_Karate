@@ -30,7 +30,7 @@ This project demonstrates **API testing** using Karate DSL with the **Swagger Pe
 [![Run CI – Karate + Maven](https://img.shields.io/badge/Run%20Workflow-CI%20%E2%80%93%20e/actionsbutton)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
 
 1. Click the **Run Workflow** button above.
-2. Choose the `ambiente` (`dev | qa | prod`).
+2. Choose the `ambiente` (`dev | cert | prod`).
 3. (Optional) Add `karate_tag` (e.g., `@smoke`, `@regression`).
 4. Click **Run workflow**.
 
