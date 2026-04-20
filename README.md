@@ -1,126 +1,269 @@
-<p align="right">
-  <a href="#english" style="padding:6px 12px; background:#0078D7; color:white; text-decoration:none; border-radius:4px;">English</a>
-  <a href="#español" style="padding:6px 12px; background:#28A745; color:white; text-decoration:none; border-radius:4px;">Español</a>
+<h1 align="center">PetStore Karate API Automation</h1>
+
+<p align="center">
+  <a href="https://github.com/CarlosArman/PetStore_Karate">
+    <img src="https://img.shields.io/badge/Version-v1.0.0-blue" alt="Version" />
+  </a>
+  <img src="https://img.shields.io/badge/Architecture-Portfolio%20Ready-success" alt="Architecture" />
+  <a href="https://www.oracle.com/java/">
+    <img src="https://img.shields.io/badge/Java-17%2B-007396" alt="Java" />
+  </a>
+  <a href="https://maven.apache.org/">
+    <img src="https://img.shields.io/badge/Maven-Build-C71A36" alt="Maven" />
+  </a>
+  <a href="https://karatelabs.github.io/karate/">
+    <img src="https://img.shields.io/badge/Karate-API%20Testing-000000" alt="Karate" />
+  </a>
+  <a href="https://junit.org/junit5/">
+    <img src="https://img.shields.io/badge/JUnit-5-25A162" alt="JUnit 5" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Testing-API-1E88E5" alt="API Testing" />
+  <img src="https://img.shields.io/badge/Workflow-GitHub%20Actions-2088FF" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/Reports-GitHub%20Pages-222222" alt="GitHub Pages Reports" />
+  <img src="https://img.shields.io/badge/Execution-Multi--Environment-informational" alt="Multi Environment" />
+  <a href="https://petstore.swagger.io/">
+    <img src="https://img.shields.io/badge/Swagger-Petstore-85EA2D" alt="Swagger Petstore" />
+  </a>
+</p>
+
+<p align="center"><b>🌐 Language / Idioma</b></p>
+<p align="center">
+  🇬🇧 English &nbsp; | &nbsp;
+  <a href="./README.es.md">🇪🇸 Español</a>
+</p>
+
+<p align="center">
+  API automation project built with <b>Karate DSL</b> for the <b>Swagger Petstore API</b>, designed to demonstrate CI-integrated execution, report publication with GitHub Pages, and scalable API test workflows for QA Automation portfolios.
 </p>
 
 ---
 
-# 🐾 Pet Store & Karate DSL
+## 🎯 Why This Project Matters
 
-## <a name="english"></a>🇬🇧 English
+This project demonstrates QA automation best practices for API testing with **Karate DSL**, **Java**, and **Maven**, with additional value through:
 
-This project demonstrates **API testing** using Karate DSL with the **Swagger Pet Store API**, integrated with
-**JUnit** and **Maven** for execution and reporting.
+- CI execution with **GitHub Actions**
+- report publishing through **GitHub Pages**
+- environment-based execution
+- tag-based selective execution
+- automated API CRUD validation
+- portfolio-ready execution evidence
+
+It is designed to show practical capability in **API test automation**, **CI integration**, **report visibility**, and **reusable automation workflows**.
 
 ---
 
-## 🔗 API Reference
+## 🚀 Project Overview
 
-- **Swagger Pet Store**: https://petstore.swagger.io/
+This repository contains an API automation project for the **Swagger Petstore API**.
+
+It includes:
+
+- Karate DSL-based API tests
+- JUnit 5 execution integration
+- Maven-based build and dependency management
+- CRUD-style scenarios over Pet Store endpoints
+- manual and CI-triggered execution
+- published execution report through GitHub Pages
+
+🔗 **API under test:** https://petstore.swagger.io/  
+🔗 **Repository:** https://github.com/CarlosArman/PetStore_Karate
 
 ---
 
-## ✅ Project Overview
+## ✨ What This Project Demonstrates
 
-- Automated API tests using **Karate DSL**.
-- Integrated with **JUnit 5** for test execution.
-- Managed with **Maven** for build and dependencies.
-- Includes scenarios for **CRUD operations** on Pet Store endpoints.
-- Generates detailed **HTML reports** for test execution.
+### Functional Coverage
+- ✅ API testing with Karate DSL
+- ✅ CRUD-oriented scenarios for Pet Store endpoints
+- ✅ environment-aware execution
+- ✅ selective execution with tags
+
+### Engineering Practices
+- ✅ GitHub Actions workflow execution
+- ✅ GitHub Pages report publication
+- ✅ Maven + JUnit 5 integration
+- ✅ CI-ready automation flow
+- ✅ shareable execution evidence through public reporting
+
+### QA Portfolio Value
+- ✅ practical API automation with Karate
+- ✅ real CI integration experience
+- ✅ public report publishing workflow
+- ✅ clean repository-level technical documentation
+
+---
+
+## 🧰 Tech Stack
+
+- **Language:** Java
+- **Build Tool:** Maven
+- **API Automation Framework:** Karate DSL
+- **Test Runner:** JUnit 5
+- **API Under Test:** Swagger Petstore
+- **CI Platform:** GitHub Actions
+- **Report Publication:** GitHub Pages
+
+---
+
+## 🏗 Project Structure
+
+```bash
+PetStore_Karate
+├── src/
+│   └── test/                       # API test sources and Karate execution assets
+├── .github/
+│   └── workflows/                  # GitHub Actions workflow definitions
+├── docs/                           # Additional documentation
+├── CHANGELOG.md                    # Project changelog
+├── CONTRIBUTING.md                 # Contribution guide
+├── pom.xml                         # Maven dependencies and build configuration
+├── README.md                       # Main documentation in English
+└── README.es.md                    # Main documentation in Spanish
+```
+
+> Adjust this structure section if your repository contains a more detailed source layout that you want to document explicitly.
+
+---
+
+## ⚙ Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/CarlosArman/PetStore_Karate.git
+cd PetStore_Karate
+```
+
+### 2. Install dependencies
+
+```bash
+mvn clean install
+```
+
+### 3. Run tests locally
+
+```bash
+mvn clean test -Dkarate.env=dev
+```
+
+---
+
+## ▶ Main Commands
+
+For the full command reference, see:
+- **[docs/COMMANDS.md](./docs/COMMANDS.md)**
+- **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)**
+
+```bash
+# Run all tests in DEV
+mvn clean test -Dkarate.env=dev
+
+# Run tests in CERT with a specific tag
+mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
+```
 
 ---
 
 ## ▶️ CI Workflow
 
-[![Workflow Status](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+The project includes a GitHub Actions workflow for Karate + Maven execution.
 
-### How to run manually:
+### Manual workflow execution
 
-[![Run CI – Karate + Maven](https://img.shields.io/badge/Run%20Workflow-CI%20%E2%80%93%20e/actionsbutton)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+1. Open the workflow in GitHub Actions.
+2. Select the `ambiente` value (`dev`, `cert`, or `prod`).
+3. Optionally define `karate_tag` such as `@smoke` or `@regression`.
+4. Run the workflow.
 
-1. Click the **Run Workflow** button above.
-2. Choose the `ambiente` (`dev | cert | prod`).
-3. (Optional) Add `karate_tag` (e.g., `@smoke`, `@regression`). Leave empty to run all tests.
-4. Click **Run workflow**.
-
-> ℹ️ Requires write access to the repository.
+> Running the workflow manually requires appropriate repository permissions.
 
 ---
 
-## 📊 Test Report
+## 📊 Reporting and Evidence
 
-View the full Karate test execution summary here:
+This project publishes the Karate execution report through **GitHub Pages**, making the results easy to review and share.
 
-[👉 **Click to open the report**](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
+### Published report
 
-## 🧩 Run Tests Locally
-
-To execute tests locally with Maven:
-
-```bash
-# Run all tests in DEV environment
-mvn clean test -Dkarate.env=dev
-
-# Run tests in QA environment with a specific tag
-mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
+```text
+https://carlosarman.github.io/PetStore_Karate/karate-summary.html
 ```
 
-## <a name="español"></a> 🇪🇸 Español
+This adds practical value to the repository because it combines:
 
-Este proyecto demuestra **pruebas de API** usando Karate DSL con la **API Swagger Pet Store**, integrado con
-**JUnit** y **Maven** para ejecución y reportes.
-
----
-
-### 🔗 Referencia de API
-
-- **Swagger Pet Store**: https://petstore.swagger.io/
+- API automation
+- CI execution
+- public report visibility
 
 ---
 
-### ✅ Descripción del Proyecto
+## 🧠 Architecture Snapshot
 
-- Pruebas automatizadas de API usando **Karate DSL**.
-- Integración con **JUnit 5** para ejecución de pruebas.
-- Gestión con **Maven** para compilación y dependencias.
-- Incluye escenarios para operaciones **CRUD** en los endpoints de Pet Store.
-- Genera reportes detallados en **HTML** de la ejecución.
+The project is structured around:
 
----
+- Karate-based API scenarios
+- Maven + JUnit 5 execution
+- CI workflow orchestration with GitHub Actions
+- published execution output through GitHub Pages
+- environment and tag-based execution control
 
-### ▶️ Flujo CI
-
-[![Estado del Workflow](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
-
-#### Cómo ejecutar manualmente:
-
-[![Ejecutar CI – Karate + Maven](https://img.shields.io/badge/Ejecutar%20Workflow-CI%20%E2%80%93%20e/actionsbutton)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
-
-1. Haz clic en el botón **Run Workflow** arriba.
-2. Elige el `ambiente` (`dev | cert | prod`).
-3. (Opcional) Agrega `karate_tag` (ej.: `@smoke`, `@regression`). Deja vacío para correr todo.
-4. Haz clic en **Run workflow**.
-
-> ℹ️ Requiere acceso de escritura al repositorio.
+For full architecture details, see:
+- **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)**
+- **[docs/ARCHITECTURE.es.md](./docs/ARCHITECTURE.es.md)**
 
 ---
 
-### 📊 Reporte de Pruebas
+## 🔗 Related Project
 
-Consulta el resumen completo de ejecución de Karate aquí:
+If you would like to explore another API automation project in the **Karate ecosystem**, check out:
 
-[👉 **Haz clic para abrir el reporte**](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
+### [karate-serverest-api-automation](https://github.com/CarlosArman/karate-serverest-api-automation)
+
+A related project built with **Karate DSL** for **ServeRest**, currently focused on the **Users** domain. It complements this repository by showing another API automation implementation in a different domain, with reusable validation assets, runners, and modular API testing structure.
+
+This helps demonstrate practical experience across multiple **Karate-based API automation projects**.
 
 ---
 
-### 🧩 Ejecutar Pruebas Localmente
+## 📚 Documentation Index
 
-Para ejecutar pruebas localmente con Maven:
+### Core docs
+- **[docs/COMMANDS.md](./docs/COMMANDS.md)** → Commands reference (English)
+- **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)** → Commands reference (Spanish)
+- **[docs/ENVIRONMENT.md](./docs/ENVIRONMENT.md)** → Environment guide (English)
+- **[docs/ENVIRONMENT.es.md](./docs/ENVIRONMENT.es.md)** → Environment guide (Spanish)
+- **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)** → Architecture guide (English)
+- **[docs/ARCHITECTURE.es.md](./docs/ARCHITECTURE.es.md)** → Architecture guide (Spanish)
 
-```bash
-# Ejecutar todas las pruebas en ambiente DEV
-mvn clean test -Dkarate.env=dev
+### Repository docs
+- **[CHANGELOG.md](./CHANGELOG.md)** → Project changelog (English)
+- **[CHANGELOG.es.md](./CHANGELOG.es.md)** → Historial de cambios (Español)
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** → Contribution guide (English)
+- **[CONTRIBUTING.es.md](./CONTRIBUTING.es.md)** → Guía de contribución (Español)
 
-# Ejecutar pruebas en ambiente QA con un tag específico
-mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
-```
+---
+
+## 🛣 Roadmap
+
+- [ ] expand endpoint coverage documentation
+- [ ] enrich local execution examples
+- [ ] document workflow inputs and tag strategy in more detail
+- [ ] add architecture details based on exact repository structure
+
+---
+
+## 👨‍💻 Author
+
+**Carlos Armando Ruiz Ato**  
+QA / Test Automation Engineer  
+🔗 GitHub: https://github.com/CarlosArman
+
+---
+
+## ⭐ Final Note
+
+This project is intentionally documented to demonstrate not only API automation capability with Karate, but also **CI integration maturity and public execution evidence through GitHub Pages**.
