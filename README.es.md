@@ -43,7 +43,8 @@
 
 ## 🎯 Por qué este proyecto importa
 
-Este proyecto demuestra buenas prácticas de automatización QA para pruebas API con **Karate DSL**, **Java** y **Maven**, con valor adicional a través de:
+Este proyecto demuestra buenas prácticas de automatización QA para pruebas API con **Karate DSL**, **Java** y **Maven**,
+con valor adicional a través de:
 
 - ejecución CI con **GitHub Actions**
 - publicación de reportes con **GitHub Pages**
@@ -52,7 +53,8 @@ Este proyecto demuestra buenas prácticas de automatización QA para pruebas API
 - validación automatizada de operaciones CRUD API
 - evidencia de ejecución orientada a portafolio
 
-Está diseñado para mostrar capacidad práctica en **automatización API**, **integración CI**, **visibilidad de reportes** y **workflows reutilizables de automatización**.
+Está diseñado para mostrar capacidad práctica en **automatización API**, **integración CI**, **visibilidad de reportes**
+y **workflows reutilizables de automatización**.
 
 ---
 
@@ -77,12 +79,14 @@ Incluye:
 ## ✨ Qué demuestra este proyecto
 
 ### Cobertura funcional
+
 - ✅ pruebas API con Karate DSL
 - ✅ escenarios orientados a operaciones CRUD sobre Pet Store
 - ✅ ejecución por ambiente
 - ✅ ejecución selectiva por tags
 
 ### Prácticas de ingeniería
+
 - ✅ ejecución mediante GitHub Actions
 - ✅ publicación de reportes con GitHub Pages
 - ✅ integración Maven + JUnit 5
@@ -90,6 +94,7 @@ Incluye:
 - ✅ evidencia de ejecución compartible de forma pública
 
 ### Valor para portafolio QA
+
 - ✅ automatización API práctica con Karate
 - ✅ experiencia real en integración continua
 - ✅ flujo de publicación de reportes públicos
@@ -125,7 +130,8 @@ PetStore_Karate
 └── README.es.md                    # Documentación principal en español
 ```
 
-> Ajusta esta sección si tu repositorio contiene una estructura fuente más detallada que quieras documentar explícitamente.
+> Ajusta esta sección si tu repositorio contiene una estructura fuente más detallada que quieras documentar
+> explícitamente.
 
 ---
 
@@ -155,6 +161,7 @@ mvn clean test -Dkarate.env=dev
 ## ▶ Comandos principales
 
 Para la referencia completa de comandos, revisa:
+
 - **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)**
 - **[docs/COMMANDS.md](./docs/COMMANDS.md)**
 
@@ -170,33 +177,37 @@ mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
 
 ## ▶️ Workflow CI
 
+[![Estado del Workflow](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+
 El proyecto incluye un workflow de GitHub Actions para ejecutar Karate + Maven.
 
 ### Ejecución manual del workflow
 
-1. Abre el workflow en GitHub Actions.
-2. Selecciona el valor de `ambiente` (`dev`, `cert` o `prod`).
-3. Opcionalmente define `karate_tag`, por ejemplo `@smoke` o `@regression`.
-4. Ejecuta el workflow.
+[![Ejecutar CI – Karate + Maven](https://img.shields.io/badge/Ejecutar%20Workflow-CI%20%E2%80%93%20Karate%20%2B%20Maven-2088FF?logo=githubactions&logoColor=white)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
 
-> Ejecutar el workflow manualmente requiere permisos adecuados dentro del repositorio.
+1. Haz clic en el botón **Run Workflow** de arriba.
+2. Elige el `ambiente` (`dev`, `cert` o `prod`).
+3. (Opcional) Agrega `karate_tag`, por ejemplo `@smoke` o `@regression`.
+4. Haz clic en **Run workflow**.
+
+> ℹ️ Ejecutar el workflow manualmente requiere permisos adecuados en el repositorio.
 
 ---
 
 ## 📊 Reportería y evidencia
 
-Este proyecto publica el reporte de ejecución Karate mediante **GitHub Pages**, lo que facilita revisar y compartir resultados.
+Este proyecto publica el reporte de ejecución de Karate mediante **GitHub Pages**, ofreciendo evidencia de ejecución
+accesible y fácil de compartir.
 
-### Reporte publicado
+[![Abrir reporte](https://img.shields.io/badge/Abrir%20Reporte-GitHub%20Pages-222222?logo=githubpages&logoColor=white)](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
 
-```text
+Enlace directo:  
 https://carlosarman.github.io/PetStore_Karate/karate-summary.html
-```
 
-Esto añade valor práctico al repositorio porque combina:
+Esto fortalece el proyecto al combinar:
 
 - automatización API
-- ejecución CI
+- ejecución en CI
 - visibilidad pública del reporte
 
 ---
@@ -212,6 +223,7 @@ El proyecto está organizado alrededor de:
 - control de ejecución por ambiente y tags
 
 Para ver el detalle completo de arquitectura, revisa:
+
 - **[docs/ARCHITECTURE.es.md](./docs/ARCHITECTURE.es.md)**
 - **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)**
 
@@ -223,7 +235,9 @@ Si quieres explorar otro proyecto de automatización API dentro del **ecosistema
 
 ### [karate-serverest-api-automation](https://github.com/CarlosArman/karate-serverest-api-automation)
 
-Proyecto relacionado construido con **Karate DSL** para **ServeRest**, actualmente enfocado en el dominio **Users**. Complementa este repositorio mostrando otra implementación de automatización API en un dominio diferente, con activos reutilizables de validación, runners y una estructura modular de pruebas API.
+Proyecto relacionado construido con **Karate DSL** para **ServeRest**, actualmente enfocado en el dominio **Users**.
+Complementa este repositorio mostrando otra implementación de automatización API en un dominio diferente, con activos
+reutilizables de validación, runners y una estructura modular de pruebas API.
 
 Esto ayuda a demostrar experiencia práctica en múltiples proyectos de **automatización API basados en Karate**.
 
@@ -232,6 +246,7 @@ Esto ayuda a demostrar experiencia práctica en múltiples proyectos de **automa
 ## 📚 Índice de documentación
 
 ### Documentación principal
+
 - **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)** → Referencia de comandos (Español)
 - **[docs/COMMANDS.md](./docs/COMMANDS.md)** → Commands reference (English)
 - **[docs/ENVIRONMENT.es.md](./docs/ENVIRONMENT.es.md)** → Guía de entorno (Español)
@@ -240,6 +255,7 @@ Esto ayuda a demostrar experiencia práctica en múltiples proyectos de **automa
 - **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)** → Architecture guide (English)
 
 ### Documentación del repositorio
+
 - **[CHANGELOG.es.md](./CHANGELOG.es.md)** → Historial de cambios (Español)
 - **[CHANGELOG.md](./CHANGELOG.md)** → Project changelog (English)
 - **[CONTRIBUTING.es.md](./CONTRIBUTING.es.md)** → Guía de contribución (Español)
@@ -258,7 +274,7 @@ Esto ayuda a demostrar experiencia práctica en múltiples proyectos de **automa
 
 ## 👨‍💻 Autor
 
-**Carlos Armando Ruiz Ato**  
+**Carlos R.**  
 QA / Test Automation Engineer  
 🔗 GitHub: https://github.com/CarlosArman
 
@@ -266,4 +282,5 @@ QA / Test Automation Engineer
 
 ## ⭐ Nota final
 
-Este proyecto está documentado intencionalmente para demostrar no solo capacidad de automatización API con Karate, sino también **madurez en integración CI y evidencia pública de ejecución mediante GitHub Pages**.
+Este proyecto está documentado intencionalmente para demostrar no solo capacidad de automatización API con Karate, sino
+también **madurez en integración CI y evidencia pública de ejecución mediante GitHub Pages**.

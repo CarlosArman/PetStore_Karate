@@ -43,7 +43,8 @@
 
 ## 🎯 Why This Project Matters
 
-This project demonstrates QA automation best practices for API testing with **Karate DSL**, **Java**, and **Maven**, with additional value through:
+This project demonstrates QA automation best practices for API testing with **Karate DSL**, **Java**, and **Maven**,
+with additional value through:
 
 - CI execution with **GitHub Actions**
 - report publishing through **GitHub Pages**
@@ -52,7 +53,8 @@ This project demonstrates QA automation best practices for API testing with **Ka
 - automated API CRUD validation
 - portfolio-ready execution evidence
 
-It is designed to show practical capability in **API test automation**, **CI integration**, **report visibility**, and **reusable automation workflows**.
+It is designed to show practical capability in **API test automation**, **CI integration**, **report visibility**, and *
+*reusable automation workflows**.
 
 ---
 
@@ -77,12 +79,14 @@ It includes:
 ## ✨ What This Project Demonstrates
 
 ### Functional Coverage
+
 - ✅ API testing with Karate DSL
 - ✅ CRUD-oriented scenarios for Pet Store endpoints
 - ✅ environment-aware execution
 - ✅ selective execution with tags
 
 ### Engineering Practices
+
 - ✅ GitHub Actions workflow execution
 - ✅ GitHub Pages report publication
 - ✅ Maven + JUnit 5 integration
@@ -90,6 +94,7 @@ It includes:
 - ✅ shareable execution evidence through public reporting
 
 ### QA Portfolio Value
+
 - ✅ practical API automation with Karate
 - ✅ real CI integration experience
 - ✅ public report publishing workflow
@@ -125,7 +130,8 @@ PetStore_Karate
 └── README.es.md                    # Main documentation in Spanish
 ```
 
-> Adjust this structure section if your repository contains a more detailed source layout that you want to document explicitly.
+> Adjust this structure section if your repository contains a more detailed source layout that you want to document
+> explicitly.
 
 ---
 
@@ -155,6 +161,7 @@ mvn clean test -Dkarate.env=dev
 ## ▶ Main Commands
 
 For the full command reference, see:
+
 - **[docs/COMMANDS.md](./docs/COMMANDS.md)**
 - **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)**
 
@@ -170,30 +177,34 @@ mvn clean test -Dkarate.env=cert -Dkarate.options="--tags @smoke"
 
 ## ▶️ CI Workflow
 
+[![Workflow Status](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml/badge.svg)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
+
 The project includes a GitHub Actions workflow for Karate + Maven execution.
 
 ### Manual workflow execution
 
-1. Open the workflow in GitHub Actions.
-2. Select the `ambiente` value (`dev`, `cert`, or `prod`).
-3. Optionally define `karate_tag` such as `@smoke` or `@regression`.
-4. Run the workflow.
+[![Run CI – Karate + Maven](https://img.shields.io/badge/Run%20Workflow-CI%20%E2%80%93%20Karate%20%2B%20Maven-2088FF?logo=githubactions&logoColor=white)](https://github.com/CarlosArman/PetStore_Karate/actions/workflows/karate-ci.yml)
 
-> Running the workflow manually requires appropriate repository permissions.
+1. Click the **Run Workflow** button above.
+2. Choose the `ambiente` (`dev`, `cert`, or `prod`).
+3. (Optional) Add `karate_tag` such as `@smoke` or `@regression`.
+4. Click **Run workflow**.
+
+> ℹ️ Running the workflow manually requires appropriate repository permissions.
 
 ---
 
 ## 📊 Reporting and Evidence
 
-This project publishes the Karate execution report through **GitHub Pages**, making the results easy to review and share.
+This project publishes the Karate execution report through **GitHub Pages**, providing shareable and easily accessible
+execution evidence.
 
-### Published report
+[![Open Report](https://img.shields.io/badge/Open%20Report-GitHub%20Pages-222222?logo=githubpages&logoColor=white)](https://carlosarman.github.io/PetStore_Karate/karate-summary.html)
 
-```text
+Direct link:  
 https://carlosarman.github.io/PetStore_Karate/karate-summary.html
-```
 
-This adds practical value to the repository because it combines:
+This strengthens the project by combining:
 
 - API automation
 - CI execution
@@ -212,6 +223,7 @@ The project is structured around:
 - environment and tag-based execution control
 
 For full architecture details, see:
+
 - **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)**
 - **[docs/ARCHITECTURE.es.md](./docs/ARCHITECTURE.es.md)**
 
@@ -223,7 +235,9 @@ If you would like to explore another API automation project in the **Karate ecos
 
 ### [karate-serverest-api-automation](https://github.com/CarlosArman/karate-serverest-api-automation)
 
-A related project built with **Karate DSL** for **ServeRest**, currently focused on the **Users** domain. It complements this repository by showing another API automation implementation in a different domain, with reusable validation assets, runners, and modular API testing structure.
+A related project built with **Karate DSL** for **ServeRest**, currently focused on the **Users** domain. It complements
+this repository by showing another API automation implementation in a different domain, with reusable validation assets,
+runners, and modular API testing structure.
 
 This helps demonstrate practical experience across multiple **Karate-based API automation projects**.
 
@@ -232,6 +246,7 @@ This helps demonstrate practical experience across multiple **Karate-based API a
 ## 📚 Documentation Index
 
 ### Core docs
+
 - **[docs/COMMANDS.md](./docs/COMMANDS.md)** → Commands reference (English)
 - **[docs/COMMANDS.es.md](./docs/COMMANDS.es.md)** → Commands reference (Spanish)
 - **[docs/ENVIRONMENT.md](./docs/ENVIRONMENT.md)** → Environment guide (English)
@@ -240,6 +255,7 @@ This helps demonstrate practical experience across multiple **Karate-based API a
 - **[docs/ARCHITECTURE.es.md](./docs/ARCHITECTURE.es.md)** → Architecture guide (Spanish)
 
 ### Repository docs
+
 - **[CHANGELOG.md](./CHANGELOG.md)** → Project changelog (English)
 - **[CHANGELOG.es.md](./CHANGELOG.es.md)** → Historial de cambios (Español)
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** → Contribution guide (English)
@@ -258,7 +274,7 @@ This helps demonstrate practical experience across multiple **Karate-based API a
 
 ## 👨‍💻 Author
 
-**Carlos Armando Ruiz Ato**  
+**Carlos R.**  
 QA / Test Automation Engineer  
 🔗 GitHub: https://github.com/CarlosArman
 
@@ -266,4 +282,5 @@ QA / Test Automation Engineer
 
 ## ⭐ Final Note
 
-This project is intentionally documented to demonstrate not only API automation capability with Karate, but also **CI integration maturity and public execution evidence through GitHub Pages**.
+This project is intentionally documented to demonstrate not only API automation capability with Karate, but also **CI
+integration maturity and public execution evidence through GitHub Pages**.
